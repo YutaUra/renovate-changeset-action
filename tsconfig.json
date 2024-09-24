@@ -4,6 +4,7 @@
     "types": ["vitest/globals"],
     "moduleResolution": "Bundler",
     "module": "ESNext",
-    "noEmit": true
+    "noEmit": true,
+    "noPropertyAccessFromIndexSignature": false
   }
 }

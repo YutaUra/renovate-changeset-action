@@ -43,7 +43,7 @@ runs:
     
     - shell: sh
       working-directory: ${{ inputs.working-directory }}
-      with:
+      env:
         diff: ${{ steps.git-diff.outputs.diff }}
         message: ${{ inputs.message }}
         dry-run: ${{ inputs.dry-run }}
