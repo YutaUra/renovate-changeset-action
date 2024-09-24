@@ -35,7 +35,7 @@ jobs:
       - name: e2e-test
         uses: ./
         with:
-          dry-run: true
+          dry-run: "true"
           message: e2e-test
 
   generate:
