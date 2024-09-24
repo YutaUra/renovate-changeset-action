@@ -15,6 +15,7 @@ const getBoolean = (name: string) => {
 };
 
 const main = async (): Promise<void> => {
+  console.log(process.env)
   await run({
     diff: getString("diff")
       .split(" ")
