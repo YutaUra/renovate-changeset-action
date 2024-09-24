@@ -21,7 +21,7 @@ jobs:
 
       - uses: YutaUra/renovate-changeset-action@v0.0.2
         with:
-          message: ${{ github.event.pull_request.title }}
+          message: ${{ github.event.push.head_commit.message }}
 ```
 
 ### Inputs
