@@ -7,26 +7,34 @@ This action creates changeset files for the PR created by Renovate.
 To run this action, create a workflow as follows:
 
 ```yaml
+on:
+  push:
+    branches:
+      - renovate/*
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.event.head_commit.author.username == 'renovate[bot]'
     steps:
-      - uses: int128/typescript-action@v1
+      - uses: YutaUra/renovate-changeset-action@v0.0.2
         with:
-          name: hello
+          message: ${{ github.event.pull_request.title }}
 ```
 
 ### Inputs
 
-| Name   | Default    | Description   |
-| ------ | ---------- | ------------- |
-| `name` | (required) | example input |
+| Name                | Default                         | Description                                                                                                |
+| ------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `message`           | (required)                      | changeset message                                                                                          |
+| `commit-message`    | `create changeset for renovate` | commit message                                                                                             |
+| `dry-run`           | `false`                         | if true, the action will not create a changeset file                                                       |
+| `working-directory` | `.`                             | root directory                                                                                             |
+| `pnpm-workspace`    | `false`                         | if true, the action respects the workspace of pnpm                                                         |
+| `setup-git-user`    | `true`                          | if true, the action sets the git user(`github-actions[bot]<github-actions[bot]@users.noreply.github.com>`) |
 
 ### Outputs
 
-| Name      | Description    |
-| --------- | -------------- |
-| `example` | example output |
 
 ## Development
 
