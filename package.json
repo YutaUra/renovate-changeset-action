@@ -1,6 +1,6 @@
 {
   "name": "renovate-changeset-action",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "lint": "biome check .",
     "build": "ncc build --source-map --license licenses.txt src/main.ts",
