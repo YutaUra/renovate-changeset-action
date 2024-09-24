@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.head_commit.author.username == 'renovate[bot]'
     steps:
+      - uses: actions/checkout@v4
+
       - uses: YutaUra/renovate-changeset-action@v0.0.2
         with:
           message: ${{ github.event.pull_request.title }}
