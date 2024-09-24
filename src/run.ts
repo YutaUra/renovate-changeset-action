@@ -26,7 +26,7 @@ export const run = async (inputs: Inputs): Promise<void> => {
     })
     .with(false, async () => {
       const pkg = packageJsonSchema.parse(
-        JSON.parse(await readFile("package.json", "utf-8"))
+        JSON.parse(await readFile("package.json", "utf-8")),
       );
       return {
         [pkg.name]: {
@@ -46,7 +46,7 @@ export const run = async (inputs: Inputs): Promise<void> => {
   const affectedPackages = Object.entries(packages).filter(
     ([name, { dependsOn, isPrivate }]) =>
       changedPackages.some((cp) => cp === name || dependsOn.includes(cp)) &&
-      !isPrivate
+      !isPrivate,
   );
 
   core.info(`diff: ${JSON.stringify(inputs.diff)}`);
@@ -60,7 +60,7 @@ export const run = async (inputs: Inputs): Promise<void> => {
   }
   const filename = join(
     ".changeset",
-    `${inputs.message.replace(/\s/g, "-").replace(/\//g, "_").toLowerCase()}.md`
+    `${inputs.message.replace(/\s/g, "-").replace(/\//g, "_").toLowerCase()}.md`,
   );
   const changeset = `---
 ${affectedPackages.map(([name]) => `"${name}": patch`).join("\n")}
