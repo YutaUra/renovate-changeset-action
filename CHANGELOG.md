@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.3
+
+### Patch Changes
+
+- 74b1edc: add docs
+
 ## 0.0.2
 
 ### Patch Changes
