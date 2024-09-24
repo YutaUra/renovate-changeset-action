@@ -46,8 +46,8 @@ runs:
       env:
         diff: ${{ steps.git-diff.outputs.diff }}
         message: ${{ inputs.message }}
-        dry-run: ${{ inputs.dry-run }}
-        pnpm-workspace: ${{ inputs.pnpm-workspace }}
-        setup-git-user: ${{ inputs.setup-git-user }}
-        commit-message: ${{ inputs.commit-message }}
+        dry_run: ${{ inputs.dry-run }}
+        pnpm_workspace: ${{ inputs.pnpm-workspace }}
+        setup_git_user: ${{ inputs.setup-git-user }}
+        commit_message: ${{ inputs.commit-message }}
       run: node ${{ github.action_path }}/dist/index.js
