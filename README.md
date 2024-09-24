@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: YutaUra/renovate-changeset-action@v0.0.2
+      - uses: YutaUra/renovate-changeset-action
         with:
           message: ${{ github.event.head_commit.message }}
 ```
