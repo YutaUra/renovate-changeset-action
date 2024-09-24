@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.7
+
+### Patch Changes
+
+- bb4f70a: fix doc
+
 ## 0.0.6
 
 ### Patch Changes
