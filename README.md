@@ -1,45 +1,6 @@
-# typescript-action [![ts](https://github.com/yutaura/typescript-action/actions/workflows/ts.yaml/badge.svg)](https://github.com/yutaura/typescript-action/actions/workflows/ts.yaml)
+# renovate-changeset-action [![ts](https://github.com/yutaura/renovate-changeset-action/actions/workflows/ts.yaml/badge.svg)](https://github.com/yutaura/renovate-changeset-action/actions/workflows/ts.yaml)
 
-This is a template of TypeScript action.
-Inspired from https://github.com/actions/typescript-action and https://github.com/int128/typescript-action.
-
-## Features
-
-- Ready to develop with the minimum configs
-  - biome
-  - tsconfig
-  - vitest
-  - changeset
-- Automated continuous release
-- Keep consistency of generated files
-- Shipped with Renovate config
-
-## Getting Started
-
-Click `Use this template` to create a repository.
-
-Then checkout your repository and test it. Node.js is required.
-
-```console
-$ git clone https://github.com/your/repo.git
-
-$ pnpm i
-$ pnpm test
-```
-
-Create a pull request for a change.
-
-you can use `changeset` to manage the version.
-
-```console
-$ git checkout -b feature
-$ pnpm changeset add
-$ git commit -m 'Add feature'
-$ gh pr create -fd
-```
-
-Once you merge a pull request, pr to create a release will be created automatically.
-you can merge release pr, then a new release will be created.
+This action creates changeset files for the PR created by Renovate.
 
 ## Specification
 

@@ -2,10 +2,52 @@ name: typescript-action
 description: Template of TypeScript Action
 
 inputs:
-  name:
-    description: example input
+  diff:
+    description: |
+      The diff to use for the changeset.
     required: true
+  message:
+    description: |
+      The message to use for the changeset.
+    required: true
+  commit-message:
+    description: |
+      The commit message to use.
+    default: "create changeset for renovate"
+  dry-run:
+    description: |
+      Whether to run in dry-run mode.
+    default: "false"
+  working-directory:
+    description: |
+      The working directory to use.
+    default: "."
+  pnpm-workspace:
+    description: |
+      The pnpm workspace to use.
+    default: "false"
+  setup-git-user:
+    description: |
+      Whether to setup git user.
+    default: "false"
 
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: composite
+  steps:
+    - uses: technote-space/get-diff-action@f27caffdd0fb9b13f4fc191c016bb4e0632844af # v6.1.2
+      id: git-diff
+
+    - uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4.0.4
+      with:
+        node-version: ${{ github.action_path }}/.node-version
+    
+    - shell: sh
+      working-directory: ${{ inputs.working-directory }}
+      with:
+        diff: ${{ steps.git-diff.outputs.diff }}
+        message: ${{ inputs.message }}
+        dry-run: ${{ inputs.dry-run }}
+        pnpm-workspace: ${{ inputs.pnpm-workspace }}
+        setup-git-user: ${{ inputs.setup-git-user }}
+        commit-message: ${{ inputs.commit-message }}
+      run: node ${{ github.action_path }}/dist/index.js
