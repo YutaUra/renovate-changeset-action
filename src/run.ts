@@ -11,13 +11,13 @@ type Inputs = {
   diff: string[];
   message: string;
   dryRun: boolean;
-  pnpmWorkspaces: boolean;
+  pnpmWorkspace: boolean;
   setupGitUser: boolean;
   commitMessage: string;
 };
 
 export const run = async (inputs: Inputs): Promise<void> => {
-  const packages = await match(inputs.pnpmWorkspaces)
+  const packages = await match(inputs.pnpmWorkspace)
     .with(true, async () => {
       const workspaceYaml = await readPnpmWorkspace("pnpm-workspace.yaml");
       core.info(`workspaceYaml: ${workspaceYaml}`);
