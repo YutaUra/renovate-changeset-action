@@ -1,0 +1,3 @@
+{
+  extends: ["github>yutaura/renovate-oss-base"],
+}
