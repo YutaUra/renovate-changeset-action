@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.1
+
+### Patch Changes
+
+- 341a85d: create action
+
 ## 0.0.2
 
 ### Patch Changes
