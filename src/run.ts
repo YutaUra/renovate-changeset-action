@@ -11,7 +11,6 @@ type Inputs = {
   diff: string[];
   message: string;
   dryRun: boolean;
-  workingDirectory: string;
   pnpmWorkspaces: boolean;
   setupGitUser: boolean;
   commitMessage: string;

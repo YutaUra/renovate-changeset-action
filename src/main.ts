@@ -22,7 +22,6 @@ const main = async (): Promise<void> => {
       .map((v) => resolve(v.replace(/^'|'$/g, ""))),
     message: getString("message"),
     dryRun: getBoolean("dry_run"),
-    workingDirectory: getString("working_directory"),
     pnpmWorkspaces: getBoolean("pnpm_workspaces"),
     setupGitUser: getBoolean("setup_git_user"),
     commitMessage: getString("commit_message"),
