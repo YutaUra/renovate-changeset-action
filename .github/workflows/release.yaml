@@ -18,7 +18,7 @@ jobs:
         with:
           app-id: ${{ secrets.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938 # v4.2.0
         with:
           token: ${{ steps.app-token.outputs.token }}
       - uses: ./.github/actions/setup
@@ -29,7 +29,7 @@ jobs:
       - run: pnpm i
       - run: pnpm build
 
-      - uses: YutaUra/typescript-changeset-release-action@87c400187130e0c6064b366b4ac0b0ef43af3767 # v0.0.1
+      - uses: YutaUra/typescript-changeset-release-action@d749308e9f42f5894b204c77111aff73cdcadb33 # v0.0.3
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         with:
           setupGitUser: false
