@@ -29,7 +29,7 @@ jobs:
       - run: pnpm i
       - run: pnpm build
 
-      - uses: YutaUra/typescript-changeset-release-action@d749308e9f42f5894b204c77111aff73cdcadb33 # v0.0.3
+      - uses: YutaUra/typescript-changeset-release-action@e9dfde5537bd7f14ceb12d977be0035254070a4a # v0.1.0
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         with:
           setupGitUser: false
