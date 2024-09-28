@@ -16,7 +16,7 @@ jobs:
   default:
     runs-on: ubuntu-latest
     # commit author should be renovate[bot]
-    if: github.event.head_commit.author.username == 'renovate[bot]' && startsWith(github.head_ref, 'renovate/')
+    if: startsWith(github.head_ref, 'renovate/')
     steps:
       - uses: actions/checkout@v4
 
