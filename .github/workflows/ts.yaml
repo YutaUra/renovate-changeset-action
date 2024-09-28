@@ -44,6 +44,7 @@ jobs:
         uses: ./
         with:
           dry-run: "true"
+          message: "e2e-test"
           github-token: ${{ steps.app-token.outputs.token }}
 
   generate:
