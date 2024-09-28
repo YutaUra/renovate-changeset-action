@@ -11,8 +11,6 @@ type Inputs = {
   message: string;
   dryRun: boolean;
   pnpmWorkspace: boolean;
-  setupGitUser: boolean;
-  commitMessage: string;
 };
 
 export const run = async (inputs: Inputs): Promise<void> => {

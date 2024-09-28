@@ -24,8 +24,6 @@ const main = async (): Promise<void> => {
     message: getString("message"),
     dryRun: getBoolean("dry_run"),
     pnpmWorkspace: getBoolean("pnpm_workspace"),
-    setupGitUser: getBoolean("setup_git_user"),
-    commitMessage: getString("commit_message"),
   });
 };
 
