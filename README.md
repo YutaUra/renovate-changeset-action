@@ -8,14 +8,15 @@ To run this action, create a workflow as follows:
 
 ```yaml
 on:
-  push:
+  pull_request:
     branches:
-      - renovate/*
+      - main
 
 jobs:
-  build:
+  default:
     runs-on: ubuntu-latest
-    if: github.event.head_commit.author.username == 'renovate[bot]'
+    # commit author should be renovate[bot]
+    if: github.event.head_commit.author.username == 'renovate[bot]' && startsWith(github.head_ref, 'renovate/')
     steps:
       - uses: actions/checkout@v4
 
