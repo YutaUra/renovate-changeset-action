@@ -32,6 +32,7 @@ jobs:
       - uses: YutaUra/typescript-changeset-release-action@e9dfde5537bd7f14ceb12d977be0035254070a4a # v0.1.0
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         with:
-          setupGitUser: false
+          setup-git-user: false
+          auto-merge: true
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
