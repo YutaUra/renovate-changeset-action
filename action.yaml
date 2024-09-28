@@ -46,4 +46,4 @@ runs:
         pnpm_workspace: ${{ inputs.pnpm-workspace }}
         setup_git_user: ${{ inputs.setup-git-user }}
         commit_message: ${{ inputs.commit-message }}
-      run: node ${{ github.action_path }}/dist/index.js
+      run: node ${{ github.action_path }}/dist/main.js

@@ -1,3 +1,5 @@
+import "source-map-support/register.js";
+
 import { resolve } from "node:path";
 import * as core from "@actions/core";
 import { run } from "./run.js";
