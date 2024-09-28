@@ -1,5 +1,13 @@
 # typescript-action
 
+## 0.0.8
+
+### Patch Changes
+
+- 7d2333b: migrate ncc to tsup
+- b8f3bd3: false
+- ac4551d: Update all non-major dependencies
+
 ## 0.0.7
 
 ### Patch Changes
