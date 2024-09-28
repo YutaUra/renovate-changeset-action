@@ -1,7 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import * as core from "@actions/core";
-import { exec } from "@actions/exec";
 import { match } from "ts-pattern";
 import { buildPnpmWorkspaceTree } from "./utils/build-pnpm-workspace-tree";
 import { packageJsonSchema } from "./utils/package-json";
@@ -69,28 +68,11 @@ ${inputs.message}`;
 
   if (!inputs.dryRun) {
     await writeFile(filename, changeset);
-
-    if (inputs.setupGitUser) {
-      core.info("setting git user");
-      await exec("git", ["config", "user.name", "github-actions[bot]"]);
-      await exec("git", [
-        "config",
-        "user.email",
-        "github-actions[bot]@users.noreply.github.com",
-      ]);
-    }
-
-    await exec("git", ["add", filename]);
-    await exec("git", ["commit", "-m", inputs.commitMessage]);
-    await exec("git", ["push"]);
   } else {
     core.info("dry run");
     core.info(`write file → ${filename}`);
     core.info("=".repeat(40));
     core.info(changeset);
     core.info("=".repeat(40));
-    core.info(`exec $ git add ${filename}`);
-    core.info(`exec $ git commit -m "${inputs.commitMessage}"`);
-    core.info("exec $ git push");
   }
 };

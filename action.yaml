@@ -22,10 +22,10 @@ inputs:
     description: |
       The pnpm workspace to use.
     default: "false"
-  setup-git-user:
+  github-token:
     description: |
-      Whether to setup git user.
-    default: "true"
+      The GitHub token to use.
+    required: true
 
 runs:
   using: composite
@@ -44,6 +44,10 @@ runs:
         message: ${{ inputs.message }}
         dry_run: ${{ inputs.dry-run }}
         pnpm_workspace: ${{ inputs.pnpm-workspace }}
-        setup_git_user: ${{ inputs.setup-git-user }}
-        commit_message: ${{ inputs.commit-message }}
       run: node ${{ github.action_path }}/dist/main.js
+
+    - uses: int128/update-generated-files-action@6ac8557861efc7d8c34f4e3f182f9c39b26e6e76 # v2.53.0
+      if: inputs.dry-run == 'false'
+      with:
+        token: ${{ inputs.github-token }}
+        commit-message: ${{ inputs.commit-message }}
