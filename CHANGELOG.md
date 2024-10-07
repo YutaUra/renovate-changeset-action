@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.11
+
+### Patch Changes
+
+- 301fefe: false
+
 ## 0.0.10
 
 ### Patch Changes
