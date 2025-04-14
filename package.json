@@ -23,11 +23,11 @@
     "@types/node": "20.17.30",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.4.0",
-    "typescript": "5.8.2",
+    "typescript": "5.8.3",
     "vitest": "2.1.9"
   },
   "engines": {
     "node": "20.19.0"
   },
-  "packageManager": "pnpm@10.7.1"
+  "packageManager": "pnpm@10.8.0"
 }
