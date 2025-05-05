@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.33
+
+### Patch Changes
+
+- 4515bfa: false
+
 ## 0.0.32
 
 ### Patch Changes
