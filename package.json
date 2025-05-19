@@ -17,17 +17,17 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "2.29.3",
+    "@changesets/cli": "2.29.4",
     "@tsconfig/strictest": "2.0.5",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "20.17.46",
+    "@types/node": "20.17.47",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.4.0",
     "typescript": "5.8.3",
     "vitest": "2.1.9"
   },
   "engines": {
-    "node": "20.19.1"
+    "node": "20.19.2"
   },
-  "packageManager": "pnpm@10.10.0"
+  "packageManager": "pnpm@10.11.0"
 }
