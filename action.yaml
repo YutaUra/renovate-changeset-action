@@ -46,7 +46,7 @@ runs:
         pnpm_workspace: ${{ inputs.pnpm-workspace }}
       run: node ${{ github.action_path }}/dist/main.js
 
-    - uses: int128/update-generated-files-action@759eb040026a5d97663b33e61243a56949f86bea # v2.59.0
+    - uses: int128/update-generated-files-action@f6dc44e35ce252932e9018f1c38d1e2a4ff80e14 # v2.60.0
       if: inputs.dry-run == 'false'
       with:
         token: ${{ inputs.github-token }}
