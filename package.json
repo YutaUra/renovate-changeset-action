@@ -13,14 +13,14 @@
     "js-yaml": "4.1.0",
     "source-map-support": "0.5.21",
     "ts-pattern": "5.7.1",
-    "zod": "3.25.71"
+    "zod": "3.25.76"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "2.29.5",
     "@tsconfig/strictest": "2.0.5",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "20.19.4",
+    "@types/node": "20.19.7",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.5.0",
     "typescript": "5.8.3",
@@ -29,5 +29,5 @@
   "engines": {
     "node": "20.19.3"
   },
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "pnpm@10.13.1"
 }
