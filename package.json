@@ -20,14 +20,14 @@
     "@changesets/cli": "2.29.5",
     "@tsconfig/strictest": "2.0.5",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "20.19.7",
+    "@types/node": "20.19.8",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.5.0",
     "typescript": "5.8.3",
     "vitest": "2.1.9"
   },
   "engines": {
-    "node": "20.19.3"
+    "node": "20.19.4"
   },
   "packageManager": "pnpm@10.13.1"
 }
