@@ -12,7 +12,7 @@
     "glob": "11.0.3",
     "js-yaml": "4.1.0",
     "source-map-support": "0.5.21",
-    "ts-pattern": "5.7.1",
+    "ts-pattern": "5.8.0",
     "zod": "3.25.76"
   },
   "devDependencies": {
@@ -23,11 +23,11 @@
     "@types/node": "20.19.9",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.5.0",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "vitest": "2.1.9"
   },
   "engines": {
     "node": "20.19.4"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.14.0"
 }
