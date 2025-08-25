@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "2.29.5",
+    "@changesets/cli": "2.29.6",
     "@tsconfig/strictest": "2.0.5",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "20.19.10",
+    "@types/node": "20.19.11",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.5.0",
     "typescript": "5.9.2",
@@ -29,5 +29,5 @@
   "engines": {
     "node": "20.19.4"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.15.0"
 }
