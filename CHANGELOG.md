@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.52
+
+### Patch Changes
+
+- c662523: false
+
 ## 0.0.51
 
 ### Patch Changes
