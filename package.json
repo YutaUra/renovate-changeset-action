@@ -20,7 +20,7 @@
     "@changesets/cli": "2.29.8",
     "@tsconfig/strictest": "2.0.8",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "20.19.25",
+    "@types/node": "20.19.26",
     "@types/source-map-support": "0.5.10",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
@@ -29,5 +29,5 @@
   "engines": {
     "node": "20.19.6"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.25.0"
 }
