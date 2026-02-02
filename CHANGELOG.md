@@ -1,5 +1,11 @@
 # typescript-action
 
+## 0.0.67
+
+### Patch Changes
+
+- ecc6447: false
+
 ## 0.0.66
 
 ### Patch Changes
