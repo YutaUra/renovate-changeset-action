@@ -16,7 +16,7 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.4.4",
     "@changesets/cli": "2.29.8",
     "@tsconfig/strictest": "2.0.8",
     "@types/js-yaml": "4.0.9",
