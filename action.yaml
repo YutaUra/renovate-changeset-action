@@ -35,7 +35,7 @@ runs:
 
     - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
       with:
-        node-version: 20.20.0
+        node-version: 20.20.1
 
     - shell: sh
       working-directory: ${{ inputs.working-directory }}
@@ -46,7 +46,7 @@ runs:
         pnpm_workspace: ${{ inputs.pnpm-workspace }}
       run: node ${{ github.action_path }}/dist/main.js
 
-    - uses: int128/update-generated-files-action@9771e63f01e6f91b14f6a8fb378220dbe944c20a # v2.81.0
+    - uses: int128/update-generated-files-action@9662c04ea188ea4238f93acda9e35e2edc49a385 # v2.82.0
       if: inputs.dry-run == 'false'
       with:
         token: ${{ inputs.github-token }}
