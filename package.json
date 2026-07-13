@@ -1,6 +1,6 @@
 {
   "name": "renovate-changeset-action",
-  "version": "0.0.81",
+  "version": "0.0.82",
   "scripts": {
     "lint": "biome check .",
     "build": "tsup",
