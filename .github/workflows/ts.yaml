@@ -70,6 +70,6 @@ jobs:
       - run: pnpm i
       - run: pnpm lint --fix
       - run: pnpm tsc --noEmit
-      - uses: int128/update-generated-files-action@1486b210d2f982ac40d27ef55660863b006722b0 # v2.115.0
+      - uses: int128/update-generated-files-action@6beae8849b2cb2856b6d302a1ff720a725141b33 # v2.118.0
         with:
           token: ${{ steps.app-token.outputs.token }}
